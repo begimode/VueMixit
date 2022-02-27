@@ -4,6 +4,7 @@
 import HelloWorld from './components/Landing.vue'
 import Landing from './components/Landing.vue';
 import Header from "./components/Header.vue"
+import Footer from "./components/Footer.vue"
 </script>
 
 <template>
@@ -13,6 +14,9 @@ import Header from "./components/Header.vue"
 
   <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
   <!-- <Landing msg="Hello Vue 3 + Vite" /> -->
+  <footer>
+    <Footer></Footer>
+  </footer>
 </template>
 
 <style>

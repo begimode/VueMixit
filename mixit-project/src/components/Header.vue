@@ -27,12 +27,12 @@
     </div>
     <div class="black-part">
         <div class="catalogo-decuentos">
-            <p class="catalogo">Catalogo</p>
-            <p class="decuentos">Descuentos</p>
+            <button class="catalogo">Catalogo</button>
+            <button class="decuentos">Descuentos</button>
         </div>
-        <div class="contactanos">
+        <button class="contactanos">
             <p class="contactanos">Contactanos</p>
-        </div>
+        </button>
     </div>
 </div>
 
@@ -55,7 +55,7 @@ const count = ref(0)
     height: 120px;
     display: flex;
     flex-direction: column;
-    border: 2px red solid;
+    position: static;
 }
 
 .white-part{
@@ -64,6 +64,7 @@ const count = ref(0)
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    color: black;
 }
 
 .logo{
@@ -74,11 +75,11 @@ const count = ref(0)
 }
 
 .white-part input{
-    background-color: blue;
     height: 30px;
     width: 200px;
     margin-left: 20px;
     margin-right: 20px;
+    align-self: center;
 }
 
 .iconos{
@@ -86,17 +87,48 @@ const count = ref(0)
     display: flex;
     flex-direction: row;  
     justify-content: space-between; 
-    background-color: blueviolet; 
-    
 }
 
 .icon{
-    background-color: aqua;
+
 }
 
 .black-part{
     background-color: black;
     display: flex;
     flex-direction: row;
+    color: white;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
 }
+
+.black-part button{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: black;
+    border-radius: 7px;
+    color: white;
+    border: none;
+}
+
+.black-part button:hover{
+    background-color: white;
+    color: black;
+
+}
+
+.catalogo-decuentos{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.catalogo-decuentos button{
+    margin-right: 20px;
+}
+
+
 </style>
