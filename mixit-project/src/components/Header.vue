@@ -40,12 +40,15 @@
 
 <script setup>
 import { ref } from 'vue'
+import bootstrap from 'bootstrap'
+import { mdiAccount } from "@mdi/js";
 
 defineProps({
   msg: String
 })
 
 const count = ref(0)
+
 </script>
 
 
@@ -90,7 +93,15 @@ const count = ref(0)
 }
 
 .icon{
+    display: flex;
+    flex-direction: row;
+    border: 2px blue solid;
+}
 
+.icono-bts{
+    border: 2px tomato solid;
+    display: flex;
+    align-self: center;
 }
 
 .black-part{

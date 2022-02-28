@@ -7,19 +7,28 @@ import Header from "./components/Header.vue"
 import Footer from "./components/Footer.vue"
 </script>
 
+
 <template>
-  <header>
+<div>
+    <header>
     <Header></Header>
   </header>
+  <div>
+    <!-- <Landing></Landing> -->
+  </div>
 
   <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
   <!-- <Landing msg="Hello Vue 3 + Vite" /> -->
+
   <footer>
-    <Footer></Footer>
+    <!-- <Footer></Footer> -->
   </footer>
+</div>
+
 </template>
 
 <style>
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
