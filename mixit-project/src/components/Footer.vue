@@ -49,7 +49,7 @@ const count = ref(0)
         <div class="second-part">
             <div class="rights">All rights are reserved</div>
             <div class="social-media">
-                facbook
+                facebook
                 twitter
                 instagram
             </div>
@@ -133,6 +133,7 @@ hr{
 
 .opciones{
     width: 100%;
+    height: 330px;
 }
 
 .opciones p{
@@ -142,7 +143,9 @@ hr{
 
 .opciones p:hover{
     color: white;
+    /* font-size: 20px; */
     zoom: 1.2;
+    cursor: pointer;
 }
 
 #nombre-opciones{

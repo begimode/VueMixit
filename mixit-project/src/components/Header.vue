@@ -9,19 +9,31 @@
         <div class="iconos">
             <div class="icon" id="tiendas">
                 <p>Tiendas</p>
-                <div class="icono-bts"></div>
+                <div class="icono-bts">
+                    <img src="../assets/geo-alt.svg" alt="" id="icono-vacio">
+                    <img src="../assets/geo-alt-fill.svg" alt="" id="icono-fill">
+                </div>
             </div>
             <div class="icon" id="perfil">
                 <p>Perfil</p>
-                <div class="icono-bts"></div>
+                <div class="icono-bts">
+                    <img src="../assets/person.svg" alt="" id="icono-vacio">
+                    <img src="../assets/person-fill.svg" alt="" id="icono-fill">
+                </div>
             </div>
             <div class="icon" id="favoritos">
-                <p>Favoritos</p>
-                <div class="icono-bts"></div>
+                <p>Favoritos  </p> 
+                <div class="icono-bts">
+                    <img src="../assets/heart.svg" alt="" id="icono-vacio"> 
+                    <img src="../assets/heart-fill.svg" alt="" id="icono-fill">
+                </div>
             </div>
             <div class="icon" id="cesta">
                 <p>Cesta</p>
-                <div class="icono-bts"></div>
+                <div class="icono-bts">
+                    <img src="../assets/cart.svg" alt="" id="icono-vacio">
+                    <img src="../assets/cart-fill.svg" alt="" id="icono-fill">
+                </div>
             </div>
         </div>
     </div>
@@ -40,12 +52,32 @@
 
 <script setup>
 import { ref } from 'vue'
-import bootstrap from 'bootstrap'
-import { mdiAccount } from "@mdi/js";
+// import bootstrap from 'bootstrap'
 
 defineProps({
   msg: String
 })
+
+
+// $('.icon').hover(function(){
+//   $('#icono-fill').css({
+//     "zoom": "2", 
+//   });
+// });
+
+// document.getElementById('tiendas').addEventListener("mouseenter", function(event){
+    // event.target.style.color = "red";
+    // setTimeout(function(){
+    //     event.target.style.color = "green";
+    // }, 1000)
+// }, false)
+
+
+// .hover(function(){
+//     $document.getElementById('icono-vacio').css({
+//         "zoom": "2"
+//     })
+// })
 
 const count = ref(0)
 
@@ -95,13 +127,58 @@ const count = ref(0)
 .icon{
     display: flex;
     flex-direction: row;
-    border: 2px blue solid;
+    /* border: 2px blue solid; */
+    height: 80%;
+    align-items: center;
+    align-self: center;
 }
 
 .icono-bts{
-    border: 2px tomato solid;
+    /* border: 2px tomato solid; */
     display: flex;
+    height: 25px;
+    width: 25px;
     align-self: center;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-left: 2px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.icono-bts img{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#icono-vacio{
+    z-index: 10;
+    background-color: white;
+    /* transition: all 0.5s ease-in-out; */
+}
+
+#icono-fill{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    /* transition: all 0.5s ease-in-out; */
+    /* visibility: visible; */
+    z-index: 7;
+}
+
+#icono-fill:hover{
+    visibility: visible;
+    /* transition: all 0.5s ease-in-out; */
+    /* transition-duration: 1s; */
+}
+
+
+#icono-vacio:hover{
+    visibility: hidden;
+    /* transition: all 0.5s ease-in-out; */
+    /* transition-duration: 1s; */
 }
 
 .black-part{
@@ -126,7 +203,6 @@ const count = ref(0)
 .black-part button:hover{
     background-color: white;
     color: black;
-
 }
 
 .catalogo-decuentos{
